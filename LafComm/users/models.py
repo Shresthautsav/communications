@@ -29,7 +29,7 @@ class User(models.Model):
     last_name = models.CharField(max_length=30,blank=True)
     preferred_name = models.CharField(max_length=50,blank=True)
     gender=models.CharField(max_length=20,blank=True)
-    relation_to_college=models.CharField(max_length=20,choices=USER_TYPE_CHOICES,blank=True,null=True)
+    relation_to_college=models.CharField(max_length=50,choices=USER_TYPE_CHOICES,blank=True,null=True)
     class_year=models.CharField(max_length=10,blank=True)
     department=models.ManyToManyField(Department,blank=True)
     interest_newsletter=models.ManyToManyField(NewsletterSection,blank=True)
